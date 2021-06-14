@@ -23,37 +23,6 @@
   --brand-color: #225dff;
 }
 
-.App__bg-overlay {
-  pointer-events: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(var(--brand-color), transparent), url('../assets/images/bg-dark.png');
-  transition: 0.2s;
-}
-
-.App__bg-overlay::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: var(--background-color);
-  opacity: 0.85;
-  transition: inherit;
-}
-
-.App.light .App__bg-overlay {
-  background: radial-gradient(var(--brand-color) 10%, transparent), url('../assets/images/bg-light.png');
-}
-
-.App.light .App__bg-overlay::after {
-  opacity: 0.9;
-}
-
 .App__body-wrapper {
   position: relative;
   z-index: 1;

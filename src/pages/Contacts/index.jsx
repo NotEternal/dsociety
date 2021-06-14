@@ -5,7 +5,6 @@ import { Modal } from '../../components/Modal';
 
 export const Contacts = () => {
   const [userName, setUserName] = useState(false);
-  const [userEmail, setUserEmail] = useState(false);
   const [userMessage, setUserMessage] = useState(false);
   const [modalTitle, setModalTitle] = useState('');
   const [modalIsVisible, setModalIsVisible] = useState(false);
@@ -14,13 +13,9 @@ export const Contacts = () => {
   useEffect(() => {
     if (userName && userMessage) {
       const userNameRegExp = /^@.+/;
-      const emailRegExp = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
-
       const nameIsCorrect = userName.match(userNameRegExp);
-      // email is unimportant field
-      const emailIsCorrect = userEmail ? userEmail.match(emailRegExp) : true;
 
-      if (nameIsCorrect && emailIsCorrect) {
+      if (nameIsCorrect) {
         setIsCorrectData(true);
       } else {
         setIsCorrectData(false);
@@ -28,24 +23,18 @@ export const Contacts = () => {
     } else {
       setIsCorrectData(false);
     }
-  }, [userName, userEmail, userMessage]);
+  }, [userName, userMessage]);
 
   return (
     <section className="Contacts">
       <h2 className="Contacts__title">НАШЕ СООБЩЕСТВО</h2>
       <p className="Contacts__description">
         Хотите что-то изменить? Есть нтересные идеи? Не хотите быть наблюдателем? Тогда можете присоединиться к нам.
-        Вместе мы сможем. Оставьте контакты в форме ниже.
+        Вместе мы сможем (ну или попытаемся ^_^). Оставьте контакты в форме ниже.
       </p>
 
       <div className="Contacts__form-wrapper">
         <form className="Contacts__form" method="post">
-          <input
-            className="Contacts__form-input unimportant"
-            onChange={(event) => setUserEmail(event.target.value)}
-            type="text"
-            placeholder="Email"
-          />
           <input
             className="Contacts__form-input"
             onChange={(event) => setUserName(event.target.value)}
@@ -84,9 +73,8 @@ export const Contacts = () => {
       setModalTitle('Вы уже отправили запрос');
       setModalIsVisible(true);
     } else if (userName && userMessage && userName[0] === '@' && userName.length > 1) {
-      const emailStr = userEmail ? `email: ${userEmail}` : '';
-      const requestText = `<b>🤖 User:</b> ${userName} ${emailStr} ➜ <b>💬 Message:</b> ${userMessage}`;
-      const botRequest = `https://api.telegram.org/bot${botData.token}/sendMessage?chat_id=${botData.chatId}&parse_mode=html&text=${requestText}`;
+      const requestText = `<b>🤖 User:</b> ${userName} ➜ <b>💬 Message:</b> ${userMessage}`;
+      const botRequest = `https://api.telegram.org/bot${botData.TOKEN}/sendMessage?chat_id=${botData.CHAT_ID}&parse_mode=html&text=${requestText}`;
 
       fetch(botRequest, {
         method: 'POST',

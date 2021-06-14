@@ -17,9 +17,6 @@ export const Footer = () => {
           <Link href="https://t.me/joinchat/ViNGrWRtj_6t8b3Y">Telegram</Link>
         </li>
         <li>
-          <Link href="https://github.com/DS0CIETY">Github</Link>
-        </li>
-        <li>
           <Link href="mailto:ds0c1ety@protonmail.ch">Email</Link>
         </li>
       </ul>

@@ -43,6 +43,8 @@ html {
   --dark: #060606;
   --white: #fff;
   --light: #f8f8f8;
+  --red: #CA2B2B;
+  --blue: #356bff;
   --black-transparent: #0000001c;
   --white-transparent: #ffffff0c;
   --error-color: #ff2424;
@@ -97,12 +99,12 @@ body::-webkit-scrollbar-thumb {
 /* ************************************** */
 
 section {
-  padding: 2rem 14%;
+  padding: 2rem 15%;
 }
 
 header,
 footer {
-  padding: 1rem 14%;
+  padding: 1rem 15%;
 }
 
 @media all and (max-width: 950px) {

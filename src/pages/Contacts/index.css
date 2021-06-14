@@ -47,11 +47,6 @@
   margin-bottom: 1.6em;
 }
 
-.Contacts__form-input.unimportant,
-.Contacts__form-textarea.unimportant {
-  border-color: var(--transparent);
-}
-
 .Contacts__form-textarea {
   min-height: 12em;
   resize: vertical;

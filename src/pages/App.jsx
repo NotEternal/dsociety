@@ -17,8 +17,6 @@ export const App = () => {
 
   return (
     <div className={`App ${isDark ? '' : 'light'}`}>
-      <div className="App__bg-overlay"></div>
-
       <div className="App__body-wrapper">
         <HashRouter>
           <Header isDark={isDark} toggleTheme={toggleTheme} />
