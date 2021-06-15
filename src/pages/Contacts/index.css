@@ -1,29 +1,20 @@
 .Contacts {
+  padding-top: 5em;
   text-align: center;
 }
 
-.Contacts__title {
-  margin-top: 4em;
-  font-size: 4em;
-}
-
-.Contacts__description {
-  max-width: 28em;
-  margin: 0 auto;
-  font-size: 1.6em;
-  line-height: 1.4em;
-  letter-spacing: 0.1em;
-}
-
-.Contacts__form-wrapper {
-  margin-top: 14vh;
+.Contacts__notice {
+  margin: 3em auto 0;
+  max-width: 36em;
+  font-size: 1.2em;
+  line-height: 1.4em
 }
 
 .Contacts__form {
   position: relative;
   z-index: 1;
-  padding: 3rem;
-  margin: 3em 0;
+  padding: 2rem;
+  margin: 1em 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,8 +28,8 @@
   padding: 1rem;
   margin: auto;
   border-radius: 0.6em;
-  border: 1px solid var(--brand-color);
-  background-color: var(--background-color);
+  border: 1px solid var(--gray);
+  background-color: var(--transparent);
   color: inherit;
   transition: 0.2s;
 }
@@ -54,13 +45,13 @@
 
 .Contacts__form-input:focus,
 .Contacts__form-textarea:focus {
-  background-color: var(--transparent);
+  border-color: var(--brand-color);
 }
 
 .Contacts__form-btn-submit {
   margin-top: 3.2em;
   font-weight: 500;
-  color: var(--brand-color);
+  color: var(--color);
   background-color: var(--background-color);
   letter-spacing: 0.2em;
 }
@@ -76,7 +67,7 @@
 .Contacts__form-btn-submit.disable,
 .Contacts__form-btn-submit.disable:hover,
 .Contacts__form-btn-submit.disable:focus {
-  color: var(--brand-color);
+  color: var(--color);
   background-color: var(--background-color);
   cursor: not-allowed;
   opacity: 0.5;

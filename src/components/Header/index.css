@@ -6,7 +6,7 @@ header {
   width: 100%;
   display: flex;
   align-items: center;
-  font-size: 1.2em;
+  font-size: 1.1em;
   box-shadow: 0 0.5em 1em var(--background-color);
 }
 
@@ -83,34 +83,9 @@ header::after {
 /*                Theme                   */
 /* ************************************** */
 
-.header__theme {
-  position: relative;
-  width: 1.1em;
-  height: 1.1em;
-  margin-left: 1em;
-  border-radius: 2em;
-  transition: 0.2s;
-}
-
-#theme-checkbox {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  opacity: 0;
-}
-
-.theme-fakecheckbox {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
-
-.theme-icon {
-  display: inline-block;
-  width: 1.1em;
-  height: 1.1em;
+.header__theme-btn {
+  width: 2.1em;
+  height: 2.1em;
+  border: none;
+  background-color: transparent;
 }

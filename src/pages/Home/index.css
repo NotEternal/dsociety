@@ -100,8 +100,8 @@
 .intro__title:after {
   content:attr(data-text);
   position: absolute;
-  left: 2px;
-  text-shadow: -1px 0 var(--blue);
+  left: 3px;
+  text-shadow: -2px 0 var(--blue);
   top: 0;
   color: inherit;
   background: var(--background-color);
@@ -113,8 +113,8 @@
 .intro__title:before {
   content: attr(data-text);
   position: absolute;
-  left: -2px;
-  text-shadow: 1px 0 var(--red);
+  left: -3px;
+  text-shadow: 2px 0 var(--red);
   top: 0;
   color: inherit;
   background: var(--background-color);

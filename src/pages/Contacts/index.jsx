@@ -27,12 +27,10 @@ export const Contacts = () => {
 
   return (
     <section className="Contacts">
-      <h2 className="Contacts__title">НАШЕ СООБЩЕСТВО</h2>
-      <p className="Contacts__description">
-        Хотите что-то изменить? Есть нтересные идеи? Не хотите быть наблюдателем? Тогда можете присоединиться к нам.
-        Вместе мы сможем (ну или попытаемся ^_^). Оставьте контакты в форме ниже.
+      <p className="Contacts__notice">
+        Пожалуйста указывайте корректное имя, в противном случае мы не сможем
+        связаться с вами. При любых проблемах пишите на почту.
       </p>
-
       <div className="Contacts__form-wrapper">
         <form className="Contacts__form" method="post">
           <input
@@ -73,7 +71,7 @@ export const Contacts = () => {
       setModalTitle('Вы уже отправили запрос');
       setModalIsVisible(true);
     } else if (userName && userMessage && userName[0] === '@' && userName.length > 1) {
-      const requestText = `<b>🤖 User:</b> ${userName} ➜ <b>💬 Message:</b> ${userMessage}`;
+      const requestText = `<b>🤖 User:</b> ${userName} -> <b>💬 Message:</b> ${userMessage}`;
       const botRequest = `https://api.telegram.org/bot${botData.TOKEN}/sendMessage?chat_id=${botData.CHAT_ID}&parse_mode=html&text=${requestText}`;
 
       fetch(botRequest, {

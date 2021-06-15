@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
+import { IoIosSunny, IoMdMoon } from 'react-icons/io';
 import './index.css';
 import Logo from '../../assets/svg/logo.svg';
 import LogoDark from '../../assets/svg/logo_dark.svg';
-import SunSvg from '../../assets/svg/sun.svg';
-import MoonSvg from '../../assets/svg/moon.svg';
 
 export const Header = (props) => {
   const { isDark, toggleTheme } = props;
@@ -28,12 +27,13 @@ export const Header = (props) => {
         </li>
       </ul>
 
-      <div className="header__theme">
-        <input onClick={toggleTheme} type="checkbox" id="theme-checkbox" defaultChecked={isDark} />
-        <label htmlFor="theme-checkbox" className="theme-fakecheckbox">
-          <img src={isDark ? SunSvg : MoonSvg} className="theme-icon" alt="Theme icon" />
-        </label>
-      </div>
+      <button className="header__theme-btn" onClick={toggleTheme}>
+        {isDark ? (
+          <IoIosSunny size="100%" color="var(--color)" />
+        ) : (
+          <IoMdMoon size="100%" color="var(--color)" />
+        )}
+      </button>
     </header>
   );
 };
