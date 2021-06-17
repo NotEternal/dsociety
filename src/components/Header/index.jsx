@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { IoIosSunny, IoMdMoon } from 'react-icons/io';
-import './index.css';
+import './index.sass';
 import Logo from '../../assets/svg/logo.svg';
 import LogoDark from '../../assets/svg/logo_dark.svg';
 

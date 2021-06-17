@@ -49,7 +49,9 @@ export const Contacts = () => {
           />
           <button
             disabled={!isCorrectData}
-            className={`Contacts__form-btn-submit ${isCorrectData ? '' : 'disable'}`}
+            className={`Contacts__form-btn-submit ${
+              isCorrectData ? '' : 'disable'
+            }`}
             type="submit"
             onClick={(event) => sendForm(event)}
           >
@@ -58,7 +60,11 @@ export const Contacts = () => {
         </form>
       </div>
 
-      <Modal isVisible={modalIsVisible} onClose={closeModal} title={modalTitle} />
+      <Modal
+        isVisible={modalIsVisible}
+        onClose={closeModal}
+        title={modalTitle}
+      />
     </section>
   );
 
@@ -70,7 +76,12 @@ export const Contacts = () => {
     if (savedUsername) {
       setModalTitle('Вы уже отправили запрос');
       setModalIsVisible(true);
-    } else if (userName && userMessage && userName[0] === '@' && userName.length > 1) {
+    } else if (
+      userName &&
+      userMessage &&
+      userName[0] === '@' &&
+      userName.length > 1
+    ) {
       const requestText = `<b>🤖 User:</b> ${userName} -> <b>💬 Message:</b> ${userMessage}`;
       const botRequest = `https://api.telegram.org/bot${botData.TOKEN}/sendMessage?chat_id=${botData.CHAT_ID}&parse_mode=html&text=${requestText}`;
 

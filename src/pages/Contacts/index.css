@@ -1,5 +1,5 @@
 .Contacts {
-  padding-top: 5em;
+  padding-top: 13vh;
   text-align: center;
 }
 
@@ -7,7 +7,7 @@
   margin: 3em auto 0;
   max-width: 36em;
   font-size: 1.2em;
-  line-height: 1.4em
+  line-height: 1.4em;
 }
 
 .Contacts__form {
