@@ -46,6 +46,7 @@
 .Contacts__form-input:focus,
 .Contacts__form-textarea:focus {
   border-color: var(--brand-color);
+  background-color: var(--background-color);
 }
 
 .Contacts__form-btn-submit {

@@ -1,4 +1,4 @@
-import './index.css';
+import './index.sass';
 import { Link } from '../Link';
 
 export const Footer = () => {

@@ -113,7 +113,7 @@ footer {
   padding: 1rem 15%;
 }
 
-@media all and (max-width: 950px) {
+@media all and (max-width: 1180px) {
   section {
     padding: 2rem 7%;
   }

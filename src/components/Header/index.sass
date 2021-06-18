@@ -7,7 +7,7 @@ header
   display: flex
   align-items: center
   font-size: 1.1em
-  box-shadow: 0 0.5em 1em var(--background-color)
+  box-shadow: 0 1em 1em var(--background-color)
 
 header::before
   content: ''
@@ -29,10 +29,6 @@ header::after
   height: 1px
   background: radial-gradient(var(--gray), transparent)
 
-/* ************************************** */
-/*                Logo                    */
-/* ************************************** */
-
 .header__logo-wrapper
   text-decoration: none
   color: inherit
@@ -46,9 +42,11 @@ header::after
   height: 2em
   margin-right: 0.6em
 
-/* ************************************** */
-/*                Links                   */
-/* ************************************** */
+.header__menu-button
+  width: 2.1em
+  height: 2.1em
+  border: none
+  background-color: transparent
 
 .header__link-list
   margin: 0
@@ -57,6 +55,18 @@ header::after
   align-items: center
   justify-content: space-between
   list-style: none
+
+  &.mobile
+    position: absolute
+    top: 0
+    left: 0
+    height: 100vh
+    width: 100vw
+    background-color: var(--transparent)
+
+  &.hidden,
+  &.mobile.hidden
+    display: none
 
 .header__link-list li
   margin: 0 0.4rem
@@ -69,10 +79,6 @@ header::after
 
 .header__link:hover
   color: var(--brand-color)
-
-/* ************************************** */
-/*                Theme                   */
-/* ************************************** */
 
 .header__theme-btn
   width: 2.1em
